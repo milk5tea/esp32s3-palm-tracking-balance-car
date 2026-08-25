@@ -1,7 +1,7 @@
 // ============================================================
 // frame_diff_test — ESP32-S3 CAM 帧差法 + 卡尔曼多目标追踪
 // 纯串口输出（115200），不联网
-// MOTION 数据从板载 SDA 口（GPIO47）发出接 STM32 的 PB11；USB 串口仅作调试
+// MOTION 数据从板载 SDA 口（GPIO47）发出接 STM32 的 PA10（板上RX口）；USB 串口仅作调试
 //
 // 验证目标：
 //   1. 稳定运行，不卡死、不重启
@@ -35,7 +35,7 @@ HardwareSerial VisionSerial(1);
 #define PCLK_GPIO_NUM     13
 
 // ========== 视觉数据串口（板载SDA/SCL口，官方例程证实 GPIO47/48 空闲） ==========
-#define VISION_TX_PIN  47   // 板载丝印SDA（GPIO47），MOTION数据输出，接STM32的PB11
+#define VISION_TX_PIN  47   // 板载丝印SDA（GPIO47），MOTION数据输出，接STM32的PA10（板上RX口）
 #define VISION_RX_PIN  48   // 板载丝印SCL（GPIO48），本程序只发不收，仅占位
 
 // 调试开关：1 = MOTION 同时在 USB 串口回显（联调验证用，正式接车后可改 0 关掉）
