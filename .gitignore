@@ -1,0 +1,12 @@
+# Keil 编译产物与个人会话文件
+stm32_balance_car/Objects/
+stm32_balance_car/Listings/
+stm32_balance_car/DebugConfig/
+stm32_balance_car/*.uvguix.*
+stm32_balance_car/*.bak
+stm32_balance_car/*.dep
+stm32_balance_car/JLinkLog.txt
+stm32_balance_car/keilkill.bat
+
+# Arduino 编译产物
+esp32_cam/build/
